@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <div class="container">
+        <div class="msg-container">
+            <% messages.forEach(msg => { %>
+                <p class="msg"><%= msg.message %></p>
+            <% }) %>
+        </div>
+        <form action="/" method="POST">
+            <input type="text" placeholder="Aa" name="message" >
+            <button>Send</button>
+        </form>
+    </div>
+</body>
+</html>
